@@ -1,0 +1,64 @@
+{
+  "nodes": [
+    {
+      "id": "067c44fa-07a3-4e0c-902a-dabd89a334a5",
+      "name": "request",
+      "type": "inputNode",
+      "content": {
+        "schema": ""
+      },
+      "position": {
+        "x": -235,
+        "y": 145
+      }
+    },
+    {
+      "id": "aa3a5d29-c9b9-4d0e-be1a-cf45f50cc04f",
+      "name": "response",
+      "type": "outputNode",
+      "content": {
+        "schema": ""
+      },
+      "position": {
+        "x": 685,
+        "y": 125
+      }
+    },
+    {
+      "id": "00f55c68-61ac-406c-ae9b-2fb88873aac6",
+      "name": "expression1",
+      "type": "expressionNode",
+      "content": {
+        "inputField": null,
+        "outputPath": null,
+        "expressions": [
+          {
+            "id": "c57df7fc-c608-4d4c-8d40-d8b9063237f1",
+            "key": "auto_write_off",
+            "value": "lmg < 5000"
+          }
+        ],
+        "passThrough": true,
+        "executionMode": "single"
+      },
+      "position": {
+        "x": 270,
+        "y": 70
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "5e74d1d7-b3f9-4f65-a453-91fc2f0b276b",
+      "type": "edge",
+      "sourceId": "067c44fa-07a3-4e0c-902a-dabd89a334a5",
+      "targetId": "00f55c68-61ac-406c-ae9b-2fb88873aac6"
+    },
+    {
+      "id": "a972c528-a39d-46e2-a5d5-aba7d406884a",
+      "type": "edge",
+      "sourceId": "00f55c68-61ac-406c-ae9b-2fb88873aac6",
+      "targetId": "aa3a5d29-c9b9-4d0e-be1a-cf45f50cc04f"
+    }
+  ]
+}
