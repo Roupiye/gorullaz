@@ -1,11 +1,12 @@
-FROM docker.io/library/golang:1.24-alpine
+FROM docker.io/library/golang:1.23.4-bookworm
 
 WORKDIR /app
-COPY . .
+COPY go.mod go.sum ./
+RUN go mod download
 
-# RUN rm gorullaz
-# RUN go mod download
-# RUN go build .
+COPY . .
+RUN rm gorullaz
+RUN go build -o /app/gorullaz .
 
 EXPOSE 3000
-CMD ["./gorullaz"]
+CMD ["/app/gorullaz"]
